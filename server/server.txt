@@ -1,0 +1,33 @@
+// mongoose.Promise = global.Promise;
+// mongoose.connect('mongodb://localhost:27017/TodoApp');
+// console.log('connected');
+
+var newTodo = new Todo({
+  text: 'aighty'
+});
+var anotherTodo = new Todo({
+  text: 'beans',
+  completed: true,
+  completedAt: 0808
+});
+
+// newTodo.save().then((doc) => {
+//     console.log('Saved todo', doc);
+// }, (err) => {
+//     console.log('Unable to save todo');
+// });
+anotherTodo.save().then((doc) => {
+  console.log('Saved another todo', doc);
+}, (err) => {
+  console.log('Unable to save another todo');
+});
+
+
+var newUser = new User({
+  email: 'dab@inbox.lv'
+});
+newUser.save().then((doc) => {
+  console.log('Saved a new user', doc);
+}, (err) => {
+  console.log('Unable to save a new user');
+});

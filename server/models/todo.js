@@ -15,7 +15,6 @@ var Todo = mongoose.model('Todo', {
     min: [0000, 'Not a valid time'],
     max: 2400,
     default: null
-
   }
 });
 

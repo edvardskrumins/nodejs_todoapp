@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 var Todo = mongoose.model('Todo', {
   text: {
     type: String,
-    enum: ['beans', 'nuts'],
     trim: true, // removes whitespace
     required: true
   },

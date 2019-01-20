@@ -79,20 +79,20 @@ describe('GET /todos', () => {
 });
 
 describe('/GET /todo by id', () => {
-  todos.forEach((todo) => {
-    it('should get todo byId', (done) => {
-    request(app)
-    .get(`/todos/${todo._id.toHexString()}`)
-    .expect(200)
-    .expect((res) => {
-      expect(res.body.todo.text).toBe(todo.text);
-    })
-    .end((err, res) => {
-      if(err) {
-        return done(err);
-      }
-      done();
+    todos.forEach((todo) => {
+      it('should get todo byId', (done) => {
+      request(app)
+      .get(`/todos/${todo._id.toHexString()}`)
+      .expect(200)
+      .expect((res) => {
+        expect(res.body.todo.text).toBe(todo.text);
+      })
+      .end((err, res) => {
+        if(err) {
+          return done(err);
+        }
+        done();
+      });
     });
-  });
-})
+  })
 });
